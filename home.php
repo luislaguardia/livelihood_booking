@@ -260,8 +260,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     .category-card {
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text visibility */
-    color: yellow; /* Text color */
+    background: rgba(0, 0, 0, 0.5); 
+    color: yellow; 
     width: 200px;
     height: 130px;
     border-radius: 10px;
@@ -343,7 +343,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <button type="button" onclick="toggleFilters()" style="padding: 9px 16px; background-color: #95a5a6; color: white; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; margin-left: 6px;">Filter ▾</button>
     </form>
 
-      <!-- New Apply as Worker Button -->
+      <!-- Apply  Worker  -->
   <a href="apply_workers.php" style="background-color: #f39c12; padding: 8px 15px; border-radius: 5px; font-weight: bold;">Apply as Worker</a>
 
 <div class="dropdown">
@@ -355,7 +355,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   </div>
 </div>
 
-    <!-- Filters container, initially hidden -->
     <div id="filters" style="max-width: 700px; margin: 20px auto 20px; display: none; gap: 10px; background: #fafafa; padding: 10px 15px; border-radius: 6px; box-shadow: 0 0 6px rgba(0,0,0,0.1); font-size: 0.9rem;">
       <form method="GET" action="filter_result.php" style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
   
@@ -432,14 +431,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <p><strong>Location:</strong> <?php echo htmlspecialchars($worker['location']) ?: 'N/A'; ?></p>
         <p><strong>Work Experience:</strong> <?php echo htmlspecialchars($worker['work_experience']); ?> years</p>
         
-        <!-- Display ratings -->
         <div class="rating">
             <div style="display: flex; align-items: center;">
                 <img src="uploads/hammerxsaw.jpg" alt="Hammer" style="width: 20px; height: 20px; margin-right: 5px;">
                 <span>
                     <?php 
-                      // Set default rating if average_rating is 0
-                      $average_rating = $worker['average_rating'] > 0 ? $worker['average_rating'] : 1.0; // Default to 1.0
+                      $average_rating = $worker['average_rating'] > 0 ? $worker['average_rating'] : 1.0;
                       echo htmlspecialchars(number_format($average_rating, 1)); 
                     ?> / 5
                 </span>
@@ -465,7 +462,6 @@ function toggleDropdown() {
   dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
 }
 
-// Hide when clicking outside
 window.addEventListener("click", function(e) {
   if (!e.target.closest(".dropdown")) {
     const dropdown = document.getElementById("dropdownContent");
@@ -473,7 +469,6 @@ window.addEventListener("click", function(e) {
   }
 });
 
-// Show filters on page load if any filter active
 window.onload = function() {
   const urlParams = new URLSearchParams(window.location.search);
   if (urlParams.has('age_range') || urlParams.has('location') || urlParams.has('min_exp')) {

@@ -15,14 +15,12 @@ if ($worker_id === 0) {
 
 $user_id = $_SESSION["user_id"];
 
-// Fetch booked dates
 $bookedDates = [];
 $result = $conn->query("SELECT booking_date FROM bookings WHERE worker_id = $worker_id AND status IN ('Approved', 'Pending')");
 while ($row = $result->fetch_assoc()) {
     $bookedDates[] = $row['booking_date'];
 }
 
-// If user submitted the form
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['selected_date'])) {
     $selected_date = $_POST['selected_date'];
     $description = $_POST['description'];
@@ -37,12 +35,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['selected_date'])) {
                                   VALUES (?, 'N/A', ?, 'Pending', '', '', 0, '', ?)");
         $insert->bind_param("isi", $user_id, $selected_date, $worker_id);
         if ($insert->execute()) {
-            $message = "✅ Booking submitted for " . $selected_date;
+            $message = "Booking submitted for " . $selected_date;
         } else {
-            $error = "❌ Failed to book.";
+            $error = "Failed to book.";
         }
     } else {
-        $error = "⚠️ This date is already booked.";
+        $error = "This date is already booked.";
     }
 }
 ?>

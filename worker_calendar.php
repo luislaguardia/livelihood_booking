@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 include 'db.php';
 
 $worker_id = $_GET['id'] ?? 0;
@@ -47,4 +47,4 @@ while ($row = $result->fetch_assoc()) {
   <h2 style="text-align:center;">Worker Availability</h2>
   <div id='calendar'></div>
 </body>
-</html>
+</html> -->

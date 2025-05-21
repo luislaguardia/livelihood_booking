@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 session_start();
 include 'db.php';
 
@@ -38,4 +38,4 @@ $result = $stmt->get_result();
         </td>
     </tr>
     <?php endwhile; ?>
-</table>
+</table> -->

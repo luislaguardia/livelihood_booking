@@ -10,7 +10,7 @@ if (!isset($_SESSION["user_id"])) {
 
 include 'db.php';
 
-// Get category
+// Get 
 if (!isset($_GET['category']) || empty(trim($_GET['category']))) {
     echo "No category selected.";
     exit();
@@ -18,7 +18,6 @@ if (!isset($_GET['category']) || empty(trim($_GET['category']))) {
 $category = strtolower(trim($_GET['category']));
 $category = mysqli_real_escape_string($conn, $category);
 
-// Handle booking submission from modal
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['selected_date'], $_POST['worker_id'])) {
     $user_id = intval($_SESSION['user_id']);
     $worker_id = intval($_POST['worker_id']);
@@ -57,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['selected_date'], $_PO
     exit();
 }
 
-// Fetch workers
+// Fetch 
 $sql = "SELECT * FROM skilled_workers 
         WHERE (
             LOWER(skills) LIKE CONCAT('%', ?, '%') 
@@ -114,7 +113,7 @@ $result = $stmt->get_result();
 <?php endwhile; ?>
 </div>
 
-<!-- Modal -->
+<!-- Modal  addeded-->
 <div id="calendarModal" class="modal">
   <div class="modal-content">
     <span onclick="document.getElementById('calendarModal').style.display='none'">&times;</span>
@@ -139,9 +138,8 @@ function openModal(workerId, bookedDates) {
   document.getElementById('modal_worker_id').value = workerId;
   document.getElementById('selected_date').value = '';
 
-  // Reset and render calendar
   const calendarEl = document.getElementById('calendar');
-  calendarEl.innerHTML = ''; // clear previous
+  calendarEl.innerHTML = ''; 
   calendarInstance = new FullCalendar.Calendar(calendarEl, {
     initialView: 'dayGridMonth',
     selectable: true,

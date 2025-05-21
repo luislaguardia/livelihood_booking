@@ -2,7 +2,6 @@
 session_start();
 include 'db.php';
 
-// Redirect to login if not authenticated
 if (!isset($_SESSION["user_id"])) {
     header("Location: login.php");
     exit();
@@ -23,9 +22,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $stmt->bind_param("sssss", $fullname, $skills, $contact_info, $price, $category);
 
     if ($stmt->execute()) {
-        $success = "✅ Application submitted! Please wait for admin approval.";
+        $success = "Application submitted! Please wait for admin approval.";
     } else {
-        $error = "❌ Error: " . $stmt->error;
+        $error = "Error: " . $stmt->error;
     }
     $stmt->close();
 }
@@ -145,8 +144,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <button type="submit">Submit Application</button>
   </form>
 
-  <!-- Back to Dashboard Button -->
   <a href="home.php" class="back-btn">⬅ Back to Dashboard</a>
-
+<!-- nilagyan ko button -->
 </body>
 </html>

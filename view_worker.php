@@ -39,9 +39,6 @@ $result = mysqli_query($conn, $sql);
   </style>
 </head>
 <body>
-<!-- 
-<a href="worker_calendar.php?id=<?= $worker['id'] ?>"> View Calendar</a>
-<a href="worker_calendar.php?id=<?= $worker['id'] ?>" class="btn btn-primary"> View Availability</a> -->
 
 <div class="top-bar">
   <p><a href="home.php" class="back-btn">&larr; Back to Dashboard</a></p>
