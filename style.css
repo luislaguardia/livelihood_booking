@@ -1,0 +1,408 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+h2 {
+    font-size: 36px; /* Mas malaki na header */
+    margin-bottom: 20px;
+}
+
+/* Container for pages */
+.container {
+    width: 80%; /* Palakihin ang container */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Message Styles */
+p {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Fixed right-side navigation menu */
+nav {
+    position: fixed;
+    top: 20px;
+    right: 60px;
+    background-color: #3498db;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+/* Menu items inside the nav */
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack the menu items vertically */
+}
+
+.nav-menu > li {
+    position: relative;
+}
+
+.nav-menu > li > a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+/* Feedback Form Styles */
+.feedback-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #f4f4f4;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.feedback-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.feedback-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-container input,
+.feedback-container textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.feedback-container button {
+    padding: 10px;
+    background: #3498db;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.feedback-container button:hover {
+    background: #2980b9;
+}
+
+.back-btn {
+    margin-top: 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+.back-btn a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+.back-btn a:hover {
+    text-decoration: underline;
+}
+
+.search-container input {
+    padding: 6px 10px !important;
+    font-size: 14px;
+    width: 120px !important;
+    border-radius: 4px;
+    margin-right: 5px !important;
+}
+
+/* Para ilipat sa gitna ang search bar */
+.search-container {
+    position: center;
+    top: 20px;
+    left: 85%; /* Centers it horizontally */
+    transform: translateX(-50%); /* Adjust to center the container */
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Para sa search bar input */
+.search-container input[type="text"] {
+    padding: 2px;
+    font-size: 15px;
+    width: 150px;
+    border: 5px solid #ccc;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+/* Para sa search button */
+.search-container button {
+    padding: 6px 12px;
+    font-size: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/* List Styles for Services */
+
+    body {
+        background-color: #8aa9c4; /* lightblue background */
+        font-family: Arial, sans-serif;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+    }
+
+ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgb(241, 6, 6);
+    color: #f7eeee; /* a nice blue text on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Logout Button Styles */
+p a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    background-color: #f44336;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+/* Para ilipat sa kanan at itaas ang search bar */
+.search-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Para sa search bar input */
+.search-container input[type="text"] {
+    padding: 6px;
+    font-size: 14px;
+    width: 150px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+/* Para sa search button */
+.search-container button {
+    padding: 6px 12px;
+    font-size: 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #45a049;
+}
+
+/* NAVIGATION MENU STYLING */
+nav {
+    background-color: #3498db;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-menu > li {
+    position: relative;
+}
+
+.nav-menu > li > a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu > li > a:hover {
+    background-color: #2980b9;
+}
+/* Hover effect */
+.nav-menu a:hover {
+    background-color: #87ceeb; /* lighter blue */
+}
+
+/* Dropdown Styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ecf0f1;
+    min-width: 160px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+.dropdown-content li a {
+    color: #333;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-content li a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+
+    .form-box {
+        max-width: 400px;
+        margin: 50px auto;
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    
+    .show-password {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        margin: -5px 0 10px 0;
+        gap: 6px;
+        justify-content: flex-start;
+    }
+    
+    
+    .show-password input[type="checkbox"] {
+        margin-right: 6px;
+    }
+    
+    .back-button {
+        display: inline-block;
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        margin-top: 10px;
+    }
+    
+    .back-button:hover {
+        background-color: #0056b3;
+    }
+    
+    /* Specific class to remove hover effects and underline on Dashboard */
+.no-underline {
+    border: none !important;
+    text-decoration: none !important;
+    border-bottom: none !important;
+    background: none !important;
+    color: white !important;
+  }
+  
+  /* Prevent underline or border even on hover */
+  .no-underline:hover,
+  .no-underline:focus,
+  .no-underline:active {
+    text-decoration: none !important;
+    border-bottom: none !important;
+    background: none !important;
+    color: white !important;
+  }
+  
